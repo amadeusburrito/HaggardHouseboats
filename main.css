@@ -93,16 +93,19 @@ img {
   border: 0px;
   margin: 0px
 }
+
 .frontmenu{
   color:white;
 }
+
 .navbar-nav {
-  width: 100%;
-  text-align: center;
-  > li {
+    width: 100%;
+    text-align: center;
+}
+
+li {
     float: none;
     display: inline-block;
-  }
 }
 
 .display-3 {
