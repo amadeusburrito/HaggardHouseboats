@@ -1,3 +1,10 @@
+html, body. div{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+html, body { overflow-x: hidden; }
+
 html {
     background-color: #e6e9e9;
     background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
@@ -52,7 +59,6 @@ img {
     border-radius: 4px;
     display: block;
     margin: 1.3em auto;
-    max-width: 95%;
 }
 .aboutus {
   height:75vh
@@ -81,17 +87,24 @@ img {
   background-color: #00a6de;
   height: 100vh;
 }
-
-.col-centered{
-  float: none;
-  margin: 0 auto;
+.row-centered {
+    text-align:center;
 }
 
-.logosvg {
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#logosvg {
   height: 90vh;
-  width: 100vw;
   border: 0px;
-  margin: 0px
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .frontmenu{
@@ -99,8 +112,12 @@ img {
 }
 
 .navbar-nav {
-    width: 100%;
+   width: 100%;
     text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
 }
 
 li {
@@ -174,6 +191,9 @@ li {
 .carousel-indicators > li {
   margin-bottom: .25rem;
 }
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
 
 
 /* MARKETING CONTENT
@@ -197,7 +217,7 @@ li {
 ------------------------- */
 
 .featurette-divider {
-  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 1rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -229,6 +249,6 @@ li {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
